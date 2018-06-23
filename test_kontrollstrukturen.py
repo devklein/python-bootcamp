@@ -1,3 +1,5 @@
+# Lesson: Loops and conditions
+
 # 1. Aufgabe: Kontinente
 # a. Gib nacheinander alle Kontinente aus der Liste continents aus.
 
@@ -13,6 +15,7 @@ for continent in continents:
     if continent == "Antarktis":
         continue
     print(continent)
+
 
 # c. Gib aus der Liste stuff nur die Kontinente aus. Du kannst dafür die Liste stuff mit einer Schleife durchgehen 
 #    und dann mit Hilfe der Variable continents prüfen, ob ein Element der Liste stuff auch in der Liste continents vorkommt.
@@ -95,7 +98,6 @@ for element in chaos:
         else:
             price *= 0.4
         order.append(price)              
-
     
 print(order)
 

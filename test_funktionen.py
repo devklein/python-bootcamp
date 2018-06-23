@@ -1,3 +1,5 @@
+# Lesson: functions
+
 # a. Schreibe eine Funktion, die den Gesamtpreis der Produkte im Warenkorb berechnet!
 # Vervollständige die Funktion list_sum(), der als Parameter eine Liste mit den Preisen übergeben wird. 
 # Die Funktion soll dann die Summe der Zahlen aus der Liste ausgeben.
@@ -18,8 +20,6 @@ list_sum(cart_prices)
 # Nun wünscht sich die Mathemagierin eine Funktion, der sie einen Artikelnamen und den Verkaufspreis übergeben kann. 
 # Daraus soll die Funktion eine Liste erstellen, in der die Preise von einem, zwei, drei,... bis zehn Einheiten des Artikels stehen. 
 # Genauer soll jedes Element in der Liste so aussehen: "Anzahl x Artikel: Preis".
-
-# Ausgabe: '1 x Wunderkeks: 0.79', '2 x Wunderkeks: 1,58'
 
 def prices_list(name, price):
     priceList = []
@@ -45,7 +45,5 @@ def add_shelf(article):
             shelf[i] = article
             break
    
-
 add_shelf("Rubik's Cube")
-add_shelf("Rubber Duck")
 print(shelf)

@@ -1,8 +1,12 @@
-# Id, Name, Year, Gender, State, Count
+ # Lesson: working with csv files
+ # Format of csv file: Id, Name, Year, Gender, State, Count
 
 maxCount = 0
 
+# open file
 with open("data/names.csv", "r") as file:
+
+    # find out how many Max were born in CA between 1950 and 2000
     for line in file:
         # putting the csv elements in a list, remove linebreaks
         splittedLine = line.strip().split(",")
@@ -15,6 +19,7 @@ with open("data/names.csv", "r") as file:
             maxCount += int(splittedLine[5])
         else:
             continue
+            
 # print result        
 print(maxCount)
     

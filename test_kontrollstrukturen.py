@@ -72,8 +72,8 @@ for price in prices:
     new_prices.append(price)     
 
 
-# print(new_prices) 
-# print()
+print(new_prices) 
+print()
 
 # c. Zusatzaufgabe (schwierig!)
 # Gehe die Elemente in der Liste chaos durch. Bei einem neuen Preis ziehst du bloß den neuen Wert aus dem String und hängst 

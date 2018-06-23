@@ -1,7 +1,7 @@
 # Lesson: functions
 
 # a. Schreibe eine Funktion, die den Gesamtpreis der Produkte im Warenkorb berechnet!
-# Vervollständige die Funktion list_sum(), der als Parameter eine Liste mit den Preisen übergeben wird. 
+# Vervollständige die Funktion list_sum, der als Parameter eine Liste mit den Preisen übergeben wird.
 # Die Funktion soll dann die Summe der Zahlen aus der Liste ausgeben.
 
 cart_prices = [20, 3.5, 6.49, 8.99, 9.99, 14.98]

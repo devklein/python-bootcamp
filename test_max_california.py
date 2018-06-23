@@ -22,7 +22,3 @@ with open("data/names.csv", "r") as file:
             
 # print result        
 print(maxCount)
-    
-        
-    
-    

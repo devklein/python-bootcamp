@@ -33,7 +33,7 @@ class Account():
 
     def withdraw(self, cash_out):
         if cash_out > self.credits:
-            print("Du kannst nur noch " +  str(self.credits) + " abheben")
+            print("Du kannst nur noch " +  str(self.credits) + " Euro abheben!")
         else:
             self.credits -= cash_out
 

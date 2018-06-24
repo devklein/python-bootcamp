@@ -10,7 +10,7 @@ class Cube():
     
     # calculate volume and print it
     def volume(self):
-        print(self.side_len ** 2 * self.side_len)
+        print(self.side_len ** 3)
         
     # calculate surface and print it
     def surface(self):

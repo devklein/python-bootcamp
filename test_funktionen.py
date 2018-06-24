@@ -21,15 +21,15 @@ list_sum(cart_prices)
 # Daraus soll die Funktion eine Liste erstellen, in der die Preise von einem, zwei, drei,... bis zehn Einheiten des Artikels stehen. 
 # Genauer soll jedes Element in der Liste so aussehen: "Anzahl x Artikel: Preis".
 
-def prices_list(name, price):
-    priceList = []
+def price_table(name, price):
+    price_list = []
 
     for i in range(1, 11):
-        priceList.append(str(i) + " x " + name + ": " + str(price * i))
+        price_list.append(str(i) + " x " + name + ": " + str(price * i))
         
-    return priceList
+    return price_list
 
-print(prices_list("Wunderkeks", 0.79))
+print(price_table("Wunderkeks", 0.79))
 
 
 # c. Schreibe eine Funktion, die die Listen mit den Artikeln auffüllt!

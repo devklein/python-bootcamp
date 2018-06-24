@@ -6,14 +6,14 @@ dict_names = {}
 with open("data/names.csv", "r") as file:
     for line in file:
         # putting the csv elements in a list, remove linebreaks
-        splittedLine = line.strip().split(",")
+        splitted_line = line.strip().split(",")
         
         # jumping over line 1 (header)
-        if "Id" in splittedLine:
+        if "Id" in splitted_line:
             continue
 
-        name = splittedLine[1]
-        count = int(splittedLine[5])
+        name = splitted_line[1]
+        count = int(splitted_line[5])
 
         # adding names to the dict and summary the count
         if name in dict_names:

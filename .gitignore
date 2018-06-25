@@ -38,7 +38,7 @@ Temporary Items
 # Untracked Files
 data/names.csv
 data/
-playground.py
+playground*
 
 
 # End of https://www.gitignore.io/api/macos,visualstudiocode

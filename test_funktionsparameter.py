@@ -78,14 +78,14 @@ def s_key(sent):
         return len(sent.split())
 
 
-sentences.sort(key = s_key)
+sentences.sort(key = s_key, reverse = True)
 print(sentences)
 
 # lambda function
 
 sentences = ["Sie liefen weiter den Strand entlang.", "Der Hund bellte laut.", "Er rutschte aus.", "Sie lachte."]
 
-sentences.sort(key = lambda sent: len(sent.split()))
+sentences.sort(key = lambda sent: len(sent.split()), reverse = True)
 print(sentences)
 
 # Zusatzaufgabe

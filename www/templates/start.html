@@ -1,0 +1,11 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<h1>{{ person[0] }} {{ person[1] }}</h1>
+
+    {% for item in fruits %}
+    <p>{{ item.name }}: {{ item.amount }} x </p>
+    {% endfor %}
+
+{% endblock%}

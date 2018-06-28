@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %} 
+
+{% block currency %}
+
+
+<h2>W&auml;hrungsrechner</h2>
+
+<p>Bitte gebe ein Wahrungspaar sowie den Umrechnungskurs ein</p>
+
+<form method="GET">
+    <label for="currency1">W&auml;hrung 1:</label>
+    <input type="text" name="currency1" id="currency1" value="{% if currency1 != None %}{{ currency1 }}{% endif %}">
+
+    <label for="currency2">W&auml;hrung 2:</label>
+    <input type="text" name="currency2" id="currency2" value="{% if currency2 != None %}{{ currency2 }}{% endif %}">
+
+    <label for="rate">Umrechnungskurs:</label>
+    <input type="text" name="rate" id="rate" value="{% if rate != None %}{{ rate }}{% endif %}">
+    <br />
+    <input type="submit" value="Umrechnen" />
+</form>
+
+<!-- {% if currency1 != None or currency2 != None or rate != None %} -->
+<table class="u-full-width">
+    <thead>
+        <tr>
+            <th>
+                Betrag in {{currency1}}
+            </th>
+            <th>
+                Betrag in {{currency2}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+       {% for qty, cash in result.items() %}
+       <tr>
+           <td>
+               {{ qty }}
+            </td>
+           <td>
+               {{ cash }}
+            </td>
+        </tr>
+        {% endfor %} 
+    </tbody>
+</table>
+<!-- {% endif %} -->
+
+{% endblock %}

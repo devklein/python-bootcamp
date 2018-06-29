@@ -6,7 +6,7 @@ class Fruits():
     def __init__(self, name, amount):
         self.name = name
         self.amount = amount
-      
+
 
 @app.route("/")
 
@@ -39,19 +39,19 @@ def test():
 @app.route("/currency")
 
 def currency():
-    currency1 = request.args.get("currency1")
-    currency2 = request.args.get("currency2")
-    rate = request.args.get("rate")
+    currency1 = request.args.get("currency1", "EUR")
+    currency2 = request.args.get("currency2", "USD")
+    rate = request.args.get("rate", "1.1892")
 
+    result1 = {}
+    result2 = {}
     
-
-    qty = [1, 5, 10, 50, 100, 200, 500, 1000]
-    result = {}
-
-    if currency1 != None or currency2 != None or rate != None:
+    for item in range(1, 5001):
         rate_float = float(rate.replace(",", "."))
-        for item in qty:
-            result[item] = round(item * rate_float, 2)
+        result1[item] = round(item * rate_float, 2)
 
+    for item in range(1, 5001):
+        rate_float = float(rate.replace(",", "."))
+        result2[item] = round(item / rate_float, 2)
 
-    return render_template("currency.html", currency1=currency1, currency2=currency2, rate=rate, result=result)
+    return render_template("currency.html", currency1=currency1, currency2=currency2, rate=rate, result1=result1, result2=result2)

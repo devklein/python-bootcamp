@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %} 
+
+{% block currency %}
+
+<h2>W&auml;hrungsrechner</h2>
+
+<p>Bitte gebe zwei Währungen sowie den Umrechnungskurs ein</p>
+
+<div class="row">
+    <div class="four columns">
+        <form method="GET">
+            <label for="currency1">W&auml;hrung 1:</label>
+            <input type="text" name="currency1" id="currency1" value="{{ currency1 }}">
+
+            <label for="currency2">W&auml;hrung 2:</label>
+            <input type="text" name="currency2" id="currency2" value="{{ currency2 }}">
+
+            <label for="rate">Umrechnungskurs:</label>
+            <input type="text" name="rate" id="rate" value="{{ rate }}">
+            <br />
+            <input class="button-primary" type="submit" value="Umrechnen" />
+        </form>
+    </div>
+
+    <div class="four columns">
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>
+                        {{currency1}}
+                    </th>
+                    <th>
+                        {{currency2}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for qty, cash in result1.items() %}
+            <tr>
+                <td>
+                    {{ qty }}
+                    </td>
+                <td>
+                    {{ cash }}
+                    </td>
+                </tr>
+                {% endfor %} 
+            </tbody>
+        </table>
+    </div>
+
+    <div class="four columns">
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>
+                        {{currency2}}
+                    </th>
+                    <th>
+                        {{currency1}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for qty, cash in result2.items() %}
+            <tr>
+                <td>
+                    {{ qty }}
+                    </td>
+                <td>
+                    {{ cash }}
+                    </td>
+                </tr>
+                {% endfor %} 
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -2,7 +2,7 @@
     list-style-type: none;
 }
 
-.navigation-item {
+li {
     float: left;
     padding-left: 10px;
     padding-right: 10px;
